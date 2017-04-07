@@ -1,6 +1,6 @@
 # Google Analytics Pthreads
 
-This is essentially a mini-library I created that used [Pthreads](php.net/manual/en/book.pthreads.php) in a CodeIgniter project in order to perform a great amount of queries to a Google Analytics (GA) account in a short time.
+This is essentially a mini-library that uses [Pthreads (PHP threads)](http://php.net/manual/en/book.pthreads.php) in a CodeIgniter project that is able to perform a great amount of queries into a Google Analytics (GA) account in a short time.
 
 The amount of queries performed should be within the acceptable [Google's "General Quota Limits"](https://developers.google.com/analytics/devguides/config/mgmt/v3/limits-quotas#general_quota_limits) in order to avoid an overload of requests to the respective Google account (which may lead to subsequent requests refusals).
 

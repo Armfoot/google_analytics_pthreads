@@ -3,8 +3,8 @@
 /**
  * Sample Model for Google Analytics (GA) data query.
  * This model does not need to access any GA account.
- * It's whole purpose is to retrieve data from the
- * developer's database for using it in GA queries.
+ * Its whole purpose is to retrieve data from the
+ * developer's database that may be used in GA queries' filters.
  *
  * @package     CodeIgniter
  * @subpackage  Models

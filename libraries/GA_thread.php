@@ -1,9 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
- * Creates pthreads for Google Analytics (GA) requests.
- *
- * Returns result rows from GA queries.
+ * A Pthread that queries Google Analytics (GA).
+ * Result rows are returned in an array after the GA queries are performed.
  *
  * @package     CodeIgniter
  * @subpackage  Libraries
@@ -11,11 +10,11 @@
  * @author      Armfoot
  */
 class Ga_thread extends Thread {
-    public $rid;				    // record id
-    private $from_date;			// oldest date to query
-    private $to_date;			  // most recent date to query
-    private $type;				  // type of query to perform
-    private $app_name;			// application name associated to Google
+    public $rid;            // record id
+    private $from_date;     // oldest date to query
+    private $to_date;       // most recent date to query
+    private $type;          // type of query to perform
+    private $app_name;      // application name associated to Google
     private $app_email;     // ID@developer.gserviceaccount.com
     private $app_key_path;  // location of the private key file
     private $app_path;      // CodeIgniter's project root directory

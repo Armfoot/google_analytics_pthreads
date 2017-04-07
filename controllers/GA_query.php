@@ -21,7 +21,7 @@ class GA_query extends CI_Controller {
         // GA library
         $this->load->library('ga_thread');
         // Model with methods that query the Database
-        $this->load->model('records_model');
+        $this->load->model('report_model');
     }
 
     /**
@@ -52,7 +52,7 @@ class GA_query extends CI_Controller {
         );
 
         // Get Database data in order to query GA 
-        $db_records = $this->records_model->get_records($to_date);
+        $db_records = $this->report_model->get_records($to_date);
         
         // Printing a query log directly to the page (no view involved)
         echo "<pre style='background: #EEE;width:90vw'><b>".count($db_records). " properties</b> found".PHP_EOL;
@@ -157,7 +157,7 @@ class GA_query extends CI_Controller {
                     date('Y-m-d',strtotime($to_date));
 
         // Get Database data in order to query GA 
-        $db_records = $this->records_model->get_records($to_date);
+        $db_records = $this->report_model->get_records($to_date);
         
         // Printing a query log directly to the page (no view involved)
         echo "<pre style='background: #EEE;width:90vw'><b>".count($db_records). " properties</b> found".PHP_EOL;
