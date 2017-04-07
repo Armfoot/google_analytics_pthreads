@@ -5,3 +5,4 @@
 $config['record_id'] = null;
 $config['from_date'] = null;
 $config['to_date'] = null;
+$config['type'] = null;

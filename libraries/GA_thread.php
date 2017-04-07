@@ -8,9 +8,19 @@
  * @package     CodeIgniter
  * @subpackage  Libraries
  * @category    Libraries
+ * @author      Armfoot
  */
 class Ga_thread extends Thread {
+    public $rid;				    // record id
     private $from_date;			// oldest date to query
+    private $to_date;			  // most recent date to query
+    private $type;				  // type of query to perform
+    private $app_name;			// application name associated to Google
+    private $app_email;     // ID@developer.gserviceaccount.com
+    private $app_key_path;  // location of the private key file
+    private $app_path;      // CodeIgniter's project root directory
+    private $app_profileID; // ga:ID
+    public $data;           // results of GA queries
 
     public function __construct($ga_params) {
         $this->rid = $ga_params['record_id'];
@@ -32,6 +42,7 @@ class Ga_thread extends Thread {
         $this->app_name= $CI->config->item('appName');
         $this->app_email= $CI->config->item('appEmail');
         $this->app_key_path= $CI->config->item('keyPath');
+        $this->app_profileID = $CI->config->item('profileID'); //'ga:12345678'
     }
 
     public function run() {
